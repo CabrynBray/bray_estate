@@ -1,0 +1,8 @@
+/* CONTACT PAGE — editorial split layout with prominent form */
+.contact-top { display: grid; grid-template-columns: 1fr .9fr; gap: 9%; align-items: start; padding-block: 95px; }
+.contact-heading h1 { font-size: clamp(3rem, 5.5vw, 5.5rem); }
+.contact-heading > p:not(.eyebrow) { max-width: 480px; color: var(--muted); }
+.contact-image { width: 100%; height: 370px; margin-top: 35px; object-fit: cover; }
+.contact-form h2 { margin-bottom: 10px; font-size: 2.2rem; }
+.contact-form > p:not(.form-status) { color: var(--muted); font-size: .88rem; }
+@media(max-width: 800px) { .contact-top { grid-template-columns: 1fr; gap: 40px; padding-block: 65px; } .contact-image { height: 300px; } }

@@ -1,0 +1,15 @@
+/* GUEST STAYS PAGE — five independently bookable accommodation cards */
+.stays-hero > img { object-position: center; }
+.stay-intro { max-width: 780px; padding-block: 90px 45px; text-align: center; }
+.stay-intro > p:last-child { max-width: 680px; margin: 0 auto; color: var(--muted); }
+.stay-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding-block: 25px 60px; }
+.stay-card { background: var(--ivory); }
+.stay-card img { width: 100%; height: 290px; object-fit: cover; }
+.stay-card-content { padding: 25px; }
+.stay-card-content .eyebrow { margin-bottom: 8px; font-size: .65rem; }
+.stay-card-content h3 { margin-bottom: 10px; }
+.stay-card-content p { min-height: 52px; color: var(--muted); font-size: .88rem; }
+.stay-card-content .text-link { font-size: .77rem; }
+.stay-note, .gallery-note { max-width: 850px; margin: 0 auto 65px; padding: 0 25px; color: var(--muted); font-size: .8rem; text-align: center; }
+@media(max-width: 850px) { .stay-grid { grid-template-columns: repeat(2, 1fr); } }
+@media(max-width: 540px) { .stay-grid { grid-template-columns: 1fr; } .stay-card img { height: 270px; } .stay-intro { padding-block: 65px 30px; } }

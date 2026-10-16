@@ -1,0 +1,9 @@
+/* AVAILABILITY PAGE — inquiry form layout */
+.availability-hero { min-height: 430px; }
+.booking-layout { display: grid; grid-template-columns: .8fr 1.2fr; align-items: start; gap: 9%; padding-block: 95px; }
+.booking-intro { position: sticky; top: 25px; }
+.booking-intro > p:not(.eyebrow) { color: var(--muted); }
+.booking-help { margin-top: 35px; padding: 23px; border-left: 3px solid var(--gold); background: var(--ivory); }
+.booking-help strong { color: var(--forest); font-family: var(--serif); font-size: 1.15rem; }
+.booking-help p { margin: 8px 0 0; color: var(--muted); font-size: .83rem; }
+@media(max-width: 800px) { .booking-layout { grid-template-columns: 1fr; gap: 35px; padding-block: 65px; } .booking-intro { position: static; } }

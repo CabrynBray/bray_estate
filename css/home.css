@@ -1,0 +1,59 @@
+/* HOME PAGE — hero, welcome section, feature band, cards, quote */
+.hero { position: relative; min-height: min(760px, 82vh); display: flex; align-items: center; overflow: hidden; background: var(--forest); color: white; }
+.hero-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 55%; }
+.hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(18,36,27,.83), rgba(18,36,27,.35) 60%, rgba(18,36,27,.08)); }
+.hero-content { position: relative; width: min(var(--content), calc(100% - 9vw)); margin-inline: auto; padding-block: 95px; }
+.hero-content h1 { max-width: 900px; }
+.hero-content h1 em { color: #E4C99C; }
+.hero-copy { max-width: 490px; margin-bottom: 30px; color: #F4F2EC; font-size: 1.02rem; }
+.hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 25px; }
+.light-link { color: white; border-color: rgba(255,255,255,.6); }
+.hero-caption { position: absolute; right: 5vw; bottom: 25px; left: 5vw; display: flex; justify-content: space-between; color: #F4F2EC; font-size: .62rem; letter-spacing: .18em; }
+.intro { display: grid; grid-template-columns: .85fr 1.15fr; align-items: center; gap: 9%; padding-block: 115px; }
+.intro-copy > p:not(.eyebrow) { max-width: 480px; margin-bottom: 28px; color: var(--muted); }
+.intro-photo { position: relative; height: 490px; }
+.intro-photo img { height: 100%; }
+.intro-photo figcaption { position: absolute; right: -18px; bottom: -18px; max-width: 290px; padding: 18px 22px; background: var(--forest); color: white; font-family: var(--serif); font-size: 1.1rem; }
+.experience-band { display: grid; grid-template-columns: 1.1fr .9fr; background: var(--forest); color: white; }
+.experience-image { min-height: 530px; padding: 5%; }
+.experience-image img { width: 100%; height: 100%; min-height: 440px; object-fit: cover; }
+.experience-copy { align-self: center; max-width: 540px; padding: 75px 10% 75px 8%; }
+.experience-copy h2 em { color: #D7BB8C; }
+.experience-copy p:not(.eyebrow) { margin-bottom: 28px; color: #E0E6DD; }
+.offerings { padding-block: 110px 125px; }
+.section-heading { display: flex; align-items: end; justify-content: space-between; gap: 35px; margin-bottom: 38px; }
+.section-heading h2 { margin-bottom: 0; }
+.section-heading > p { max-width: 320px; color: var(--muted); }
+.offering-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.offering-card { position: relative; display: block; min-width: 0; overflow: hidden; background: var(--forest); color: white; }
+.offering-card img { width: 100%; height: 360px; object-fit: cover; transition: transform .5s ease; }
+.offering-card:hover img { transform: scale(1.04); }
+.offering-card::after { position: absolute; inset: 35% 0 0; background: linear-gradient(transparent, rgba(15,30,22,.85)); content: ""; }
+.card-number, .offering-card h3, .card-arrow { position: absolute; z-index: 1; }
+.card-number { bottom: 82px; left: 22px; color: #E7D5B5; font-size: .65rem; letter-spacing: .14em; }
+.offering-card h3 { bottom: 17px; left: 22px; margin: 0; font-size: 1.65rem; }
+.card-arrow { right: 20px; bottom: 24px; font-size: 1.2rem; }
+.quote-section { padding: 100px 20px; background: var(--walnut); color: white; text-align: center; }
+.quote-section blockquote { max-width: 900px; margin: 0 auto 30px; font-family: var(--serif); font-size: clamp(2rem, 4.5vw, 4rem); line-height: 1.25; }
+.quote-section > span { color: #E7D5B5; font-size: .65rem; letter-spacing: .18em; }
+@media (max-width: 800px) {
+  .intro { grid-template-columns: 1fr; gap: 35px; padding-block: 75px; }
+  .intro-photo { height: 420px; margin-right: 15px; }
+  .experience-band { grid-template-columns: 1fr; }
+  .experience-image { min-height: 0; padding: 25px 25px 0; }
+  .experience-image img { min-height: 320px; }
+  .experience-copy { padding: 45px 30px 60px; }
+  .section-heading { align-items: flex-start; flex-direction: column; gap: 15px; }
+  .offering-grid { grid-template-columns: 1fr 1fr; }
+  .offering-card:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 520px) {
+  .hero { min-height: 670px; }
+  .hero-content { width: calc(100% - 40px); }
+  .hero-caption { font-size: .52rem; }
+  .intro-photo { height: 320px; }
+  .offering-grid { grid-template-columns: 1fr; }
+  .offering-card:last-child { grid-column: auto; }
+  .offering-card img { height: 340px; }
+  .offerings { padding-block: 75px; }
+}

@@ -1,0 +1,20 @@
+/* VENUE PAGE — barn feature, property plan, detail cards */
+.split-section { display: grid; grid-template-columns: .8fr 1.2fr; gap: 9%; align-items: center; padding-block: 110px; }
+.split-section > div > p:not(.eyebrow) { color: var(--muted); }
+.large-photo img { width: 100%; height: 570px; object-fit: cover; }
+.large-photo figcaption { padding-top: 12px; color: var(--muted); font-size: .75rem; }
+.feature-list { margin: 25px 0 32px; padding: 0; list-style: none; }
+.feature-list li { padding: 10px 0; border-bottom: 1px solid var(--line); color: var(--forest); font-size: .88rem; }
+.feature-list li::before { content: "✳"; margin-right: 12px; color: var(--gold); }
+.dark-feature { display: grid; grid-template-columns: .75fr 1.25fr; align-items: center; gap: 7%; padding: 75px 5vw; background: var(--forest); color: white; }
+.dark-feature-copy { max-width: 490px; justify-self: end; }
+.dark-feature-copy h2 em { color: #D7BB8C; }
+.dark-feature-copy p:not(.eyebrow) { color: #DCE4DA; }
+.dark-feature > img { width: 100%; max-height: 520px; object-fit: cover; }
+.details-section { padding-block: 100px; }
+.detail-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.detail-grid article { padding: 30px 25px; border-top: 1px solid var(--gold); background: var(--ivory); }
+.detail-grid article > span { color: var(--gold); font-size: .8rem; letter-spacing: .1em; }
+.detail-grid h3 { margin: 24px 0 12px; }
+.detail-grid p { margin-bottom: 0; color: var(--muted); font-size: .9rem; }
+@media(max-width: 760px) { .split-section, .dark-feature { grid-template-columns: 1fr; gap: 35px; padding-block: 65px; } .large-photo img { height: 380px; } .dark-feature-copy { justify-self: start; } .detail-grid { grid-template-columns: 1fr; } }
